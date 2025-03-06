@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web y UX/UI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+    
+    font-size: clamp(3rem, 9vw, 9.5rem); /* Se ajusta entre 3rem y 9.5rem según el ancho de la pantalla */
+    font-weight: bold;
+    margin-top: 160px;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 4rem;
+                margin-top: 100px;
+            }
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-top: 160px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1.0rem;
+            color: #000000;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        a, button {
+            display: inline-block;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        a:hover, button:hover {
+            background-color: #7a7a7a;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .button-container {
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            animation: bounce 1.5s infinite;
+        }
+
+        .btn:hover {
+            background-color: #1E90FF;
+            color: rgb(255, 255, 255);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="fade-in">Artes Gráficas</h1>
+    <p id="description" class="fade-in">
+        "Como diseñador gráfico, aplico las artes gráficas en preprensa, pruebas de color y ajustes, asegurando que cada imagen, textura y tonalidad refleje la máxima precisión y calidad."
+    </p>
+    
+    <section class="fade-in">
+        <h2>Optimización y Preprensa</h2>
+        <p>Me especializo en la preparación de archivos para impresión, asegurando precisión en colores, materiales y resolución. Ajusto pliegos, optimizo imágenes y utilizo RIPs como Onyx y Caldera para una reproducción fiel y de alta calidad.</p>
+        <ul>
+            <li>Ajuste de pliegos y formatos de impresión</li>
+            <li>Optimización de imágenes y tipografía</li>
+            <li>Gestión de color y separación de tintas</li>
+            <li>Revisión y pruebas de calidad</li>
+        </ul>
+    </section>
+    
+    <section class="fade-in">
+        <h2>Software y RIPs</h2>
+        <p>Trabajo con herramientas especializadas para la conversión de archivos, calibración de colores y optimización de impresión.</p>
+        <ul>
+            <li>🎨 Uso de RIPs como Onyx y Caldera</li>
+            <li>Conversión de archivos en distintos formatos</li>
+            <li>Control de lineatura y tramas de impresión</li>
+            <li>Pruebas de color y gestión de perfiles ICC</li>
+        </ul>
+      
+    </section>
+    
+
+
+
+
+    <section class="tecnica">
+        <h2 class="impresion">Trabajos</h2>
+        <div class="grid">
+            <div class="tecnica">
+                <img src="assets/preprensa/1.png" alt="Póster">
+                <h3>Póster</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/2.png" alt="Espectacular">
+                <h3>Espectacular</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/3.png" alt="Digital">
+                <h3>Digital</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/4.png" alt="Serigrafía">
+                <h3>Serigrafía</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/5.png" alt="Flexografía">
+                <h3>Electrostático</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/6.png" alt="Gravado">
+                <h3>Copetes</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/7.png" alt="Sublimación">
+                <h3>Planillas</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/8.png" alt="Letterpress">
+                <h3>Etiquetas</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/9.png" alt="Rotograbado">
+                <h3>Cenefa</h3>
+            </div>
+            <div class="tecnica">
+                <img src="assets/preprensa/10.png" alt="Rotograbado">
+                <h3>Fotográfico</h3>
+            </div>
+        </div>
+    </section>
+    <div class="button-container">
+        <a href="index.html#branding" class="btn"><strong>Regresar</strong></a>
+    </div>
+    
+    <style>
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @media (min-width: 768px) {
+        .grid {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(2, auto);
+        }
+    }
+    
+    .tecnica {
+        padding: 12px;
+        text-align: center;
+        border-radius: 8px;
+    }
+    
+    .tecnica img {
+        display: block;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 6px;
+        transition: opacity 0.5s;
+    }
+    
+    .tecnica img:hover {
+        opacity: 0.8;
+    }
+    
+    .tecnica h3 {
+        margin-top: 10px;
+        font-size: 0.9em;
+        color: #000000;
+    }
+    </style>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        gsap.to("#title", { opacity: 1, y: -10, duration: 1 });
+        gsap.to("#description", { opacity: 1, delay: 0.5, duration: 1 });
+    </script>
+</body>
+</html>

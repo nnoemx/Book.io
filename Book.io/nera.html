@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Noé Eduardo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+          
+    background-color: black;
+            color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            animation: fadeIn 1.5s ease-in-out;
+            max-width: 90%;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-in-out;
+        }
+        p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #000000;
+            color: white;
+            transition: transform 0.2s, background 0.3s;
+            animation: bounce 1.5s infinite;
+        }
+        button:hover {
+            background: #000000;
+            color: rgb(255, 255, 255);
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            button {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            button {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Noé Eduardo - Diseñador Gráfico</h1>
+        <p class="pp">
+            "Licenciado en Diseño Gráfico, mexicano. Apasionado por la impresión, el diseño y la ilustración. Combino creatividad y técnica para dar vida a piezas visuales con identidad y propósito."</p>
+        <a href="index.html"><button>Regresar</button></a>
+    </div>
+</body>
+</html>
