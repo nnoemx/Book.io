@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Gráfico y Creatividad</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-top: 300px;
+            margin-bottom: 8px;
+            font-size: clamp(4.0rem, 8vw, 9.5rem);
+            color: #000000;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: clamp(3.0rem, 7vw, 7rem);
+                /* Reducir tamaño en pantallas pequeñas */
+                margin-top: 160px;
+                /* Ajustar el margen superior */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: clamp(2.5rem, 6vw, 5rem);
+                /* Reducir más en dispositivos muy pequeños */
+                margin-top: 60px;
+                /* Reducir aún más el margen superior */
+            }
+        }
+
+        .intro {
+            text-align: center;
+            margin: 0px auto;
+            max-width: 700px;
+            font-size: 1rem;
+            color: #000000;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 160px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1.0rem;
+            color: #000000;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        #buttons {
+            margin: 20px 0;
+        }
+
+        a,
+        button {
+            display: inline-block;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        a:hover,
+        button:hover {
+            background-color: #7a7a7a;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+           
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #000000;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin-top: 40px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            animation: bounce 1.5s infinite;
+        }
+
+        @media (max-width: 780px) {
+            .btn {
+                margin-top: 10px;
+            }
+        }
+
+        .btn:hover {
+            background-color: #1E90FF;
+            color: rgb(255, 255, 255);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title" class="fade-in">Diseño Gráfico</h1>
+    <p id="description" class="fade-in">
+        Mi experiencia en diseño gráfico abarca desde la identidad visual y el branding hasta la maquetación,
+        ilustración y diseño UI.
+        Utilizo herramientas como Adobe Creative Suite, Figma y metodologías de diseño para comunicar visualmente de
+        manera efectiva.
+    </p>
+    <div id="buttons" class="fade-in">
+        <a href="https://www.behance.net/Noe-Eduardo" target="_blank">Ver mi portafolio</a>
+    </div>
+
+    <section class="fade-in">
+        <h2>Identidad Visual y Branding</h2>
+        <p>Creación de marcas sólidas con estrategias visuales bien definidas, logrando coherencia y diferenciación en
+            el mercado.</p>
+        <ul>
+            <li>✔️ Diseño de logotipos y manuales de marca</li>
+            <li>✔️ Selección de paletas de color y tipografías</li>
+            <li>✔️ Aplicaciones de marca en diferentes soportes</li>
+        </ul>
+    </section>
+
+    <section class="fade-in">
+        <h2>Diseño Editorial y Publicitario</h2>
+        <p>Composición de materiales impresos y digitales para comunicar mensajes de forma atractiva y efectiva.</p>
+        <ul>
+            <li>✔️ Maquetación de revistas, catálogos y flyers</li>
+            <li>✔️ Diseño de packaging y etiquetas</li>
+            <li>✔️ Creación de anuncios publicitarios</li>
+        </ul>
+    </section>
+
+    <section class="fade-in">
+        <h2>Diseño UI y Maquetación Web</h2>
+        <p>Aplicación de principios de diseño para interfaces digitales con experiencia de usuario optimizada.</p>
+        <ul>
+            <li>✔️ Prototipado en Figma y Adobe XD</li>
+            <li>✔️ Diseño de interfaces intuitivas</li>
+            <li>✔️ Desarrollo con HTML, CSS y JavaScript</li>
+        </ul>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    
+        .grid {
+            display: grid;
+            margin-top: 150px;
+            margin-bottom: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            width: 90%;
+            max-width: 900px;
+            justify-items: center;
+        }
+    
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+        }
+    
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+    
+        .grid-item.active {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            z-index: 1000;
+            width: 90vw;
+            height: auto;
+            max-width: 600px;
+            max-height: 80vh;
+            background: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        .grid-item.active img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+        }
+    
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+    
+        .overlay.active {
+            display: block;
+        }
+    
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                width: 80%;
+                padding: 15px;
+                margin-top: 100px;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+    
+
+
+
+    <div class="overlay" onclick="closeActive()"></div>
+    <div class="container">
+        <div class="grid">
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/Instagram/In (1).heic" alt="Imagen 1"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/Instagram/In (1).jpg" alt="Imagen 2"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/Instagram/In (1).webp" alt="Imagen 3"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/Instagram/In (2).webp" alt="Imagen 4"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/Instagram/In (3).heic" alt="Imagen 5"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/Instagram/In (3).jpg" alt="Imagen 6"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/Instagram/In (5).jpg" alt="Imagen 7"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/portfolio-figma/aloee.svg" alt="Imagen 8"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/portfolio-figma/CHICA.svg" alt="Imagen 9"></div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/jpg/portfolio-figma/pato.svg" alt="Imagen 10">
+            </div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/img-jpg/11.jpg" alt="Imagen 11">
+            </div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/img-jpg/8.jpg" alt="Imagen 12">
+            </div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/img-jpg/7.heic" alt="Imagen 11">
+            </div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/img-jpg/16.jpg" alt="Imagen 11">
+            </div>
+            <div class="grid-item" onclick="toggleSize(this)"><img src="assets/img/img-jpg/1.jpg" alt="Imagen 11">
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="index.html#branding" class="btn"><strong>Regresar</strong></a>
+    </div>
+    <script>
+        function toggleSize(element) {
+            const activeElement = document.querySelector('.grid-item.active');
+            const overlay = document.querySelector('.overlay');
+
+            if (activeElement && activeElement !== element) {
+                activeElement.classList.remove('active');
+            }
+
+            if (!element.classList.contains('active')) {
+                element.classList.add('active');
+                overlay.classList.add('active');
+            } else {
+                element.classList.remove('active');
+                overlay.classList.remove('active');
+            }
+        }
+
+        function closeActive() {
+            const activeElement = document.querySelector('.grid-item.active');
+            const overlay = document.querySelector('.overlay');
+            if (activeElement) {
+                activeElement.classList.remove('active');
+            }
+            overlay.classList.remove('active');
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    gsap.to("#title", { opacity: 1, y: -10, duration: 1 });
+    gsap.to("#description", { opacity: 1, delay: 0.5, duration: 1 });
+    gsap.to("#buttons", { opacity: 1, delay: 1, duration: 1 });
+</script>
+</body>
+
+</html>
