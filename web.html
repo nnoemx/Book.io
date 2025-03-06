@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web y UX/UI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        /* Estilos generales */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Encabezados */
+        h1 {
+    margin-top: 300px;
+    margin-bottom: 8px;
+    font-size: clamp(4.0rem, 8vw, 9.5rem); /* Tamaño dinámico entre 2.5rem y 9.5rem */
+    color: #000000;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    margin: 0px auto;
+    max-width: 700px;
+    font-size: 1rem;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        margin-top: 100px; /* Ajustamos el margen para que no quede muy pegado */
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 160px;
+    color: #000000;
+}
+
+@media (max-width: 768px) { 
+    h2 {
+        margin-top: 80px; /* Reduce el margen en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) { 
+    h2 {
+        margin-top: 50px; /* Aún menos margen en pantallas muy pequeñas */
+    }
+}
+
+
+        /* Párrafos */
+        p {
+            font-size: 1.0rem;
+            color: #000000;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        /* Botones y enlaces */
+        #buttons {
+            margin: 20px 0;
+        }
+
+        a, button {
+            display: inline-block;
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        a:hover, button:hover {
+            background-color: #7a7a7a;
+        }
+
+        /* Secciones */
+        section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Listas */
+        ul {
+            text-align: left;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        /* Animaciones */
+        .fade-in {
+    opacity: 0;
+    transform: translateY(5px); /* En lugar de 10px */
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px); /* Reducido */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        .button-container {
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .btn {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            animation: bounce 1.5s infinite;
+        }
+
+        .btn:hover {
+            background-color: #1E90FF;
+            color: rgb(255, 255, 255);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="fade-in">Diseño Web</h1>
+    <p id="description" class="fade-in">
+        Explora mi trabajo en GitHub, donde aplico HTML, CSS con Flexbox y Grid para crear interfaces optimizadas, siguiendo buenas prácticas de código, optimización y Atomic Design en Figma.
+    </p>
+    <div id="buttons" class="fade-in">
+        <a href="https://github.com/Noe-Eduardo" target="_blank">Ver en GitHub</a>
+       
+    </div>
+
+    <section class="fade-in">
+        <h2>Buenas Prácticas en HTML y CSS</h2>
+        <p>Utilizo Flexbox y Grid para construir interfaces responsivas y accesibles, asegurando un código limpio y eficiente.</p>
+        <ul>
+            <li>✔️ Uso semántico de HTML</li>
+            <li>✔️ Organización modular con CSS</li>
+            <li>✔️ Adaptabilidad con Flexbox y Grid</li>
+            <li>✔️ Accesibilidad y compatibilidad cross-browser</li>
+        </ul>
+    </section>
+
+    <section class="fade-in">
+        <h2>Optimización y Atomic Design</h2>
+        <p>Mi enfoque en Atomic Design permite crear interfaces escalables y eficientes, reutilizando componentes para mejorar la mantenibilidad del código.</p>
+        <ul>
+            <li>Diseño basado en átomos, moléculas y organismos</li>
+            <li>Reutilización de componentes UI</li>
+            <li>Performance y optimización del código</li>
+            <li>Mejora continua y testing</li>
+        </ul>
+    </section>
+
+    <section class="fade-in">
+        <h2>Figma para UI/UX</h2>
+        <p>Diseño interfaces con Figma, utilizando prototipos interactivos y flujos de usuario optimizados para mejorar la experiencia digital.</p>
+        <ul>
+            <li>🎨 Diseño de interfaces limpias y modernas</li>
+            <li>Uso de grids y espaciado coherente</li>
+            <li>Creación de prototipos funcionales</li>
+            <li>Colaboración en equipo y feedback iterativo</li>
+        </ul>
+        <div class="button-container">
+            <a href="index.html#branding" class="btn"><strong>Regresar</strong></a>
+        </div>
+    </section>
+
+    <script>
+        gsap.to("#title", { opacity: 1, y: -10, duration: 1 });
+        gsap.to("#description", { opacity: 1, delay: 0.5, duration: 1 });
+        gsap.to("#buttons", { opacity: 1, delay: 1, duration: 1 });
+    </script>
+</body>
+</html>
