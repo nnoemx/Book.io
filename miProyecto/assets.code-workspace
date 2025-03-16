@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../assets"
+		},
+		{
+			"path": "../Book.io"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Book.io"
+	}
+}
