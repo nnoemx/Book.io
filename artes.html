@@ -116,6 +116,17 @@
             color: rgb(255, 255, 255);
             transform: scale(1.1);
         }
+        @media (max-width: 480px) {
+    h1 {
+        font-size: 4rem;
+        margin-top: 60px; /* Reduce el espacio superior */
+        margin-bottom: 10px; /* Reduce el espacio inferior */
+    }
+
+    h2 {
+        margin-top: 80px; /* Reduce el espacio superior */
+    }
+}
     </style>
 </head>
 <body>
@@ -229,6 +240,7 @@
         object-fit: cover;
         border-radius: 6px;
         transition: opacity 0.5s;
+        
     }
     
     .tecnica img:hover {
