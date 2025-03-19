@@ -422,52 +422,33 @@ li {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     max-width: 80%;
-    margin: 10rem auto;
+    margin: 20rem auto;
     text-align: center;
 }
 
 .service-box {
-    background: rgba(255, 255, 255, 0.2); /* Transparencia para efecto Glassmorphism */
-    backdrop-filter: blur(10px);
+    background: #ffffff;
+
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    position: relative;
-    overflow: hidden;
-}
-
-.service-box::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 60%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.service-box:hover::before {
-    opacity: 1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .service-box:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .service-box h3 {
-    font-size: 1.6rem;
-    color: #222;
+    font-size: 1.5rem;
+    color: #333;
     margin-bottom: 1rem;
 }
 
 .service-box p {
     font-size: 1rem;
-    color: #555;
+    color: #666;
     margin-bottom: 1.5rem;
 }
 
@@ -477,19 +458,19 @@ li {
     color: #007BFF;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s;
 }
 
 .service-box a:hover {
     color: #000000;
-    transform: scale(1.05);
 }
 
-/* Responsive */
+
 @media (max-width: 1024px) {
     .services {
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 5rem;
+        margin-top: 10rem;
+        margin-bottom: 0.1rem;
     }
 }
 
@@ -498,7 +479,6 @@ li {
         grid-template-columns: 1fr;
     }
 }
-
 
 
 
@@ -620,7 +600,7 @@ li {
     }
 
     .small-text {
-        font-size: 0.87rem;
+        font-size: 0.88rem;
     }
 }
 
