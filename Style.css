@@ -422,32 +422,52 @@ li {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     max-width: 80%;
-    margin: 20rem auto;
+    margin: 10rem auto;
     text-align: center;
 }
 
 .service-box {
-    background: #ffffff;
-
+    background: rgba(255, 255, 255, 0.2); /* Transparencia para efecto Glassmorphism */
+    backdrop-filter: blur(10px);
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.service-box:hover::before {
+    opacity: 1;
 }
 
 .service-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .service-box h3 {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.6rem;
+    color: #222;
     margin-bottom: 1rem;
 }
 
 .service-box p {
     font-size: 1rem;
-    color: #666;
+    color: #555;
     margin-bottom: 1.5rem;
 }
 
@@ -457,19 +477,19 @@ li {
     color: #007BFF;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .service-box a:hover {
     color: #000000;
+    transform: scale(1.05);
 }
 
-
+/* Responsive */
 @media (max-width: 1024px) {
     .services {
         grid-template-columns: repeat(2, 1fr);
-        margin-top: 10rem;
-        margin-bottom: 0.1rem;
+        margin-top: 5rem;
     }
 }
 
@@ -478,6 +498,7 @@ li {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
@@ -545,25 +566,24 @@ li {
 
 
 
-
 .container7 {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px; /* Reducimos el ancho máximo para hacer los textos más estrechos */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajustamos el minmax para mejor responsividad */
+    gap: 10px; /* Reducimos la separación entre elementos */
     margin: auto;
-    margin-top: 70px;
-    padding: 10px 20px;
+    margin-top: 50px; /* Reducimos el margen superior */
+    padding: 5px 15px; /* Ajustamos el padding para estrechar los lados */
     overflow: hidden;
     box-sizing: border-box;
 }
 
 .box {
-    padding: 40px;
+    padding: 10px; /* Reducimos el padding interno */
     text-align: center;
     max-width: 100%;
-    min-height: 250px;
+    min-height: 200px; /* Reducimos la altura mínima para compactar el contenido */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -573,41 +593,36 @@ li {
 
 .h2-main {
     color: #333;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+    margin-bottom: 20px; /* Reducimos la separación entre título y texto */
+    font-size: 1.4rem;
 }
 
 .small-text {
     color: #666;
-    font-size: 1rem;
+    font-size: 0.88rem;
     margin-bottom: 0;
 }
 
 @media (max-width: 768px) {
     .container7 {
-
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 0px;
-        margin-top: 30;
-        padding-top: 30;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajuste para móviles */
+        gap: 5px; /* Menos espacio entre elementos */
+        margin-top: 30px; /* Más compacto en móviles */
+        padding: 10px;
     }
 
     .box {
-        padding: 20px;
-
+        padding: 45px; /* Menos padding interno */
     }
 
     .h2-main {
-        font-size: 1.2rem;
-
+        font-size: 1.1rem;
     }
 
     .small-text {
-        font-size: 0.85rem;
-
+        font-size: 0.87rem;
     }
 }
-
 
 
 
@@ -883,36 +898,55 @@ li {
 .cc {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
-    line-height: 1.6;
-    letter-spacing: 0.05em;
-    color: #333;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: clamp(40px, 8vw, 100px);
+    line-height: 1.4;
+    letter-spacing: 0.08em;
     text-transform: capitalize;
     text-align: center;
-    background: linear-gradient(90deg, #000000, #000000);
+    background: linear-gradient(90deg, #c9c9c9, #000000, #333, #666);
+    background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 10px;
-    margin: 0 auto;
+    animation: gradientMove 6s infinite alternate ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+                 4px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
     width: fit-content;
-    transition: all 0.3s ease;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+}
 
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
 }
 
 @media (max-width: 700px) {
     .cc {
-        font-size: clamp(80px, 12vw, 200px);
+        font-size: clamp(60px, 10vw, 160px);
         line-height: 1.2;
         letter-spacing: 0.1em;
     }
 }
 
 .cc:hover {
-    color: #fff;
-    background-color: #333;
-    transform: scale(1.1);
     font-weight: 900;
+    background: linear-gradient(90deg, #c9c9c9, #000000, #333, #666);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMoveHover 3s infinite alternate ease-in-out;
+   
+    transform: scale(1.1);
+    letter-spacing: 0.12em;
+    transition: all 0.3s ease-in-out;
 }
+
+@keyframes gradientMoveHover {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
 
 .txt-info {
     display: flex;
