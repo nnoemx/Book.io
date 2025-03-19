@@ -1127,3 +1127,81 @@ li {
 form {
     margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10% auto;
+    text-align: center;
+}
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+#contact-modall {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2000; /* Asegura que esté por encima del menú */
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1999; /* Debe estar justo detrás del modal */
+    pointer-events: none; /* Evita que interfiera cuando está oculto */
+}
+#contact-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2000; /* Siempre por encima del menú */
+}
+
+/* Asegurar que el menú funcione bien */
+#menu-hamburguesa {
+    position: fixed; /* Mantiene el menú en pantalla */
+    top: 0;
+    right: 0;
+    z-index: 1000; /* Mantiene el menú debajo del modal */
+}

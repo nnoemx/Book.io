@@ -38,7 +38,7 @@
             <li><a href="index.html" class="menu-item">Home</a></li>
             <li><a href="nera.html" class="menu-item">néra</a></li>
             <li><a href="diseño.html" class="menu-item">Diseño</a></li>
-            <li><a href="#" id="contact-popup">Contact</a></li>
+            <li><a href="#c" id="contact-linkk">Contact</a></li>
             <li><a href="https://github.com/Noe-Eduardo" class="menu-item">GitHub</a></li>
         </ul>
     </div>
@@ -211,19 +211,7 @@
     <div class="cursor"></div>
 
 
-    <div id="contact-popup" class="popup">
-        <div class="popup-content">
-            <span id="close-popup" class="close-btn">&times;</span>
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>
+ 
 
 
 
@@ -241,6 +229,81 @@
             cursor.style.top = `${e.clientY}px`;
         });
     </script>
+
+
+
+
+
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contacto</h2>
+        <p>Correo: n.noe.mx@outlook.com</p>
+        <p>Teléfono: +(52)55 891 255 99</p>
+        
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const contactLink = document.getElementById("contact-link");
+        const modal = document.getElementById("contact-modal");
+        const closeBtn = modal.querySelector(".close");
+
+        contactLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        });
+
+        closeBtn.addEventListener("click", function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const contactLink = document.getElementById("contact-linkk");
+    
+    const modal = document.getElementById("contact-modal");
+    const overlay = document.getElementById("modal-overlay");
+    const closeBtn = modal.querySelector(".close");
+
+    function openModal() {
+        modal.style.display = "block";
+        overlay.style.display = "block";
+        overlay.style.pointerEvents = "auto"; // Activa el fondo al abrir
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+        overlay.style.pointerEvents = "none"; // Lo desactiva al cerrar
+    }
+
+    contactLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        openModal();
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
+
+    window.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+});
+
+
+
+</script>
 
 </body>
 
