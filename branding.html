@@ -175,6 +175,24 @@
             color: rgb(255, 255, 255);
             transform: scale(1.1);
         }
+        @media (max-width: 360px) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+            width: 75%;
+            max-width: 360px;
+            gap: 8px;
+        }
+
+        .grid-item {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+        }
+
+        .btn {
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+    }
     </style>
 </head>
 
