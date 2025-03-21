@@ -877,13 +877,13 @@ li {
 
 .cc {
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
-    font-size: clamp(40px, 8vw, 100px);
+    font-weight: 400;
+    font-size: clamp(40px, 120vw, 100px);
     line-height: 1.4;
     letter-spacing: 0.08em;
     text-transform: capitalize;
     text-align: center;
-    background: linear-gradient(90deg, #c9c9c9, #000000, #333, #666);
+    background: linear-gradient(90deg, #ffffff, #000000, #333, #666);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
